@@ -25,3 +25,23 @@ namespace LightSwitch
 		void switchButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e); //Method used to detect if the light switch button is pressed
 	};
 }
+
+/*
+Electronical Diagram
+GPIO5 ------
+			|
+			|
+		   | |
+		   | | 330R
+		   | |	
+			|
+			|
+		 --------
+		    /\
+		   /  \ // Green LED
+		  /    \
+		  ------
+			|
+			|
+GND --------
+*/

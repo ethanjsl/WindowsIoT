@@ -29,6 +29,15 @@ MainPage::MainPage()
 	InitializeComponent();
 
 	initGPIO(); //Initializes the GPIO
+	timerOn_ = ref new DispatcherTimer();
+	timerOff_ = ref new DispatcherTimer();
+	TimeSpan intervalOn, intervalOff;
+	intervalOff.Duration = 100;
+	intervalOn.Duration = 50;
+	timerOn_->Interval = intervalOn;
+	timerOff_->Interval = intervalOff;
+	timerOn_->Tick += ref new EventHandler<Object ^>(this, &MainPage::OnTickOn);
+	timerOff_->Tick += ref new EventHandler<Object ^>(this, &MainPage::OnTickOff);
 }
 
 void MainPage::initGPIO() {
@@ -55,4 +64,5 @@ void LightSwitch::MainPage::switchButton_Click(Platform::Object^ sender, Windows
 		LED_pin_->Write(GpioPinValue::Low); //turn the pin off
 		switchButton->Content = "Turn Light on"; //change the text on the light switch button
 	}
+	Slider::V
 }

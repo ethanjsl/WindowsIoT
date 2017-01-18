@@ -10,7 +10,9 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock x:Name="lightSwitchText" Text="Light Switch" TextAlignment="Center" FontFamily="Arial" FontSize="24"/>
-            <Button x:Name="switchButton" Content="Turn Light On" Margin="10" Click="switchButton_Click"/>
+            <Button x:Name="switchButton" Content="Turn Light On" Margin="10" Click="switchButton_Click" HorizontalAlignment="Center"/>
+            <Slider x:Name="dimSlider" Margin="10" Width="200" HorizontalAlignment="Center"/>
+            <TextBlock x:Name="dimValueBox" Margin="10" Text="0%" HorizontalAlignment="Center"/>
         </StackPanel>
     </Grid>
 </Page>

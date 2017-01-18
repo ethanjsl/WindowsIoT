@@ -13,6 +13,7 @@ namespace Windows {
             namespace Controls {
                 ref class TextBlock;
                 ref class Button;
+                ref class Slider;
             }
         }
     }
@@ -35,6 +36,8 @@ namespace LightSwitch
     
         private: ::Windows::UI::Xaml::Controls::TextBlock^ lightSwitchText;
         private: ::Windows::UI::Xaml::Controls::Button^ switchButton;
+        private: ::Windows::UI::Xaml::Controls::Slider^ dimSlider;
+        private: ::Windows::UI::Xaml::Controls::TextBlock^ dimValueBox;
     };
 }
 
